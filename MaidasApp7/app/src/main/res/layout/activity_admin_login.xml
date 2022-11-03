@@ -15,33 +15,34 @@
         <!--로그인하기-->
 
         <ImageView
-            android:id="@+id/imgStartLogo"
+            android:id="@+id/imgAdminLogo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="150dp"
             android:src="@drawable/logo_with_text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="93dp"
+            tools:layout_editor_absoluteY="162dp" />
 
         <EditText
-            android:id="@+id/etUserLoginEmail"
+            android:id="@+id/etAdminLoginDepartmentId"
             android:layout_width="300dp"
             android:layout_height="48dp"
             android:layout_marginTop="100dp"
             android:background="@drawable/background_et"
             android:ems="10"
-            android:hint="이메일을 입력하세요"
-            android:inputType="textEmailAddress"
+            android:hint="부서 아이디를 입력하세요"
             android:padding="12dp"
             android:textColorHint="#000000"
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/imgStartLogo" />
+            app:layout_constraintTop_toBottomOf="@id/imgAdminLogo" />
 
         <EditText
-            android:id="@+id/etUserLoginPassword"
+            android:id="@+id/etAdminLoginPassword"
             android:layout_width="300dp"
             android:layout_height="48dp"
             android:layout_marginTop="12dp"
@@ -54,11 +55,13 @@
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/etUserLoginEmail"
-            tools:ignore="MissingConstraints" />
+            app:layout_constraintTop_toBottomOf="@id/etAdminLoginDepartmentId"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="55dp"
+            tools:layout_editor_absoluteY="377dp" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btnUserLoginLogin"
+            android:id="@+id/btnAdminLoginLogin"
             android:layout_width="300dp"
             android:layout_height="48dp"
             android:layout_marginBottom="60dp"
@@ -74,19 +77,6 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            tools:ignore="MissingConstraints" />
-
-        <TextView
-            android:id="@+id/tvUserLoginGoToRegister"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:stateListAnimator="@null"
-            android:text="만들다가 처음이신가요?"
-            android:textColor="@color/black"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnUserLoginLogin"
             tools:ignore="MissingConstraints" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,20 +1,166 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".presentation.main.view.UserRegisterActivity">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/logo_with_text"
-        android:layout_marginTop="120dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imgUserRegisterLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo_with_text"
+            app:layout_constraintBottom_toTopOf="@id/layoutUserRegisterInformation"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+            android:id="@+id/layoutUserRegisterInformation"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="@id/btnUserRegisterRegister"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imgUserRegisterLogo">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/etUserRegisterEmail"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="12dp"
+                    android:layout_weight="5"
+                    android:background="@drawable/background_et"
+                    android:ems="10"
+                    android:hint="이메일을 입력해 주세요"
+                    android:inputType="textEmailAddress"
+                    android:padding="12dp"
+                    android:textColorHint="#000000"
+                    android:textSize="14sp" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnUserRegisterVerifyEmail"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/background_btn_primary"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:padding="12dp"
+                    android:stateListAnimator="@null"
+                    android:text="인증 요청"
+                    android:textColor="@color/white"
+                    android:textColorHint="#000000"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/etUserRegisterVerificationCode"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/background_et"
+                android:ems="10"
+                android:hint="이메일 인증 코드를 입력해 주세요"
+                android:inputType="textEmailAddress"
+                android:padding="12dp"
+                android:textColorHint="#000000"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/etUserRegisterNickname"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/background_et"
+                android:ems="10"
+                android:hint="닉네임(이름)을 입력해 주세요"
+                android:inputType="textEmailAddress"
+                android:padding="12dp"
+                android:textColorHint="#000000"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/etUserRegisterPassword"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/background_et"
+                android:ems="10"
+                android:hint="비밀번호를 입력해 주세요"
+                android:inputType="textPassword"
+                android:padding="12dp"
+                android:textColorHint="#000000"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/etUserRegisterRepeatPassword"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginBottom="12dp"
+                android:background="@drawable/background_et"
+                android:ems="10"
+                android:hint="비밀번호를 확인해 주세요"
+                android:inputType="textPassword"
+                android:padding="12dp"
+                android:textColorHint="#000000"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/etUserRegisterCompanyVerificationCode"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/background_et"
+                android:ems="10"
+                android:hint="회사 인증 코드를 입력해 주세요"
+                android:padding="12dp"
+                android:textColorHint="#000000"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnUserRegisterRegister"
+            android:layout_width="300dp"
+            android:layout_height="48dp"
+            android:layout_marginBottom="60dp"
+            android:background="@drawable/background_btn_primary"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:padding="12dp"
+            android:stateListAnimator="@null"
+            android:text="가입하기"
+            android:textColor="@color/white"
+            android:textColorHint="#000000"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tvUserRegisterGoToLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:stateListAnimator="@null"
+            android:text="이미 계정이 있으신가요?"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnUserRegisterRegister" />
 
 
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
