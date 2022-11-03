@@ -13,8 +13,7 @@ class UserRegisterActivity : BaseActivity<ActivityUserRegisterBinding>(
 
     private val viewModel by lazy {
         ViewModelProvider(
-            this,
-            UserRegisterViewModelFactory(UserRegisterRepository())
+            this, UserRegisterViewModelFactory(UserRegisterRepository())
         )[UserRegisterViewModel::class.java]
     }
 
@@ -30,17 +29,15 @@ class UserRegisterActivity : BaseActivity<ActivityUserRegisterBinding>(
         }
 
         binding.btnUserRegisterRegister.setOnClickListener {
-            viewModel.register(
-                UserRegisterRequest(
-                    binding.etUserRegisterEmail.text.toString(),
-                    binding.etUserRegisterVerificationCode.text.toString(),
-                    binding.etUserRegisterNickname.text.toString(),
-                    binding.etUserRegisterPassword.text.toString(),
-                    binding.etUserRegisterCompanyVerificationCode.text.toString()
-                ).also {
-                    println(it.toString())
-                }
-            )
+            viewModel.register(UserRegisterRequest(
+                binding.etUserRegisterEmail.text.toString(),
+                binding.etUserRegisterVerificationCode.text.toString(),
+                binding.etUserRegisterNickname.text.toString(),
+                binding.etUserRegisterPassword.text.toString(),
+                binding.etUserRegisterCompanyVerificationCode.text.toString()
+            ).also {
+                println(it.toString())
+            })
         }
 
         binding.tvUserRegisterGoToLogin.setOnClickListener {
@@ -49,15 +46,14 @@ class UserRegisterActivity : BaseActivity<ActivityUserRegisterBinding>(
     }
 
     override fun observeEvent() {
-        viewModel.registerResponse.observe(
+        viewModel.response.observe(
             this
         ) {
             if (it.isSuccessful) {
                 Toast.makeText(this, "회원가입 성공!", Toast.LENGTH_SHORT).show()
                 finish()
             } else {
-                println(it.code())
-                Toast.makeText(this, "회원가입 실패..", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, "회원가입 실패.. ${it.code()}", Toast.LENGTH_SHORT).show()
             }
         }
     }
