@@ -17,4 +17,4 @@ object RetrofitClient {
 }
 
 // TODO
-const val BASE_URL = "http://www.kobis.or.kr/kobisopenapi/webservice/rest/"
+const val BASE_URL = "http://192.168.101.90:8080"
