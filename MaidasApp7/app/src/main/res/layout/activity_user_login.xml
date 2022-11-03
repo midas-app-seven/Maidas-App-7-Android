@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <!--이메일 입력-->
+        <!--비밀번호 입력-->
+
+        <EditText
+            android:id="@+id/editTextTextPersonName"
+            android:layout_width="296dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="57dp"
+            android:layout_marginTop="341dp"
+            android:layout_marginEnd="58dp"
+            android:layout_marginBottom="14dp"
+            android:background="@drawable/background_textview"
+            android:ems="10"
+            android:hint="이메일을 입력하세요"
+            android:inputType="textPersonName"
+            android:padding="12dp"
+            android:textColorHint="#000000"
+            android:textSize="14dp"
+            app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            tools:ignore="MissingConstraints" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName2"
+            android:layout_width="296dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="57dp"
+            android:layout_marginEnd="58dp"
+            android:layout_marginBottom="125dp"
+            android:background="@drawable/background_textview"
+            android:ems="10"
+            android:hint="비밀번호를 입력하세요"
+            android:inputType="textPersonName"
+            android:padding="12dp"
+            android:textColorHint="#000000"
+            android:textSize="14dp"
+            app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <!--로그인하기-->
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/editTextTextPersonName3"
+            android:layout_width="296dp"
+            android:layout_height="48dp"
+            android:background="@drawable/background_btn"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:padding="12dp"
+            android:text="로그인하기"
+            android:textColor="@color/white"
+            android:textColorHint="#000000"
+            android:textSize="14dp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="58dp"
+
+            tools:layout_editor_absoluteY="589dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="transparent"
+            android:stateListAnimator="@null"
+            android:text="만들다가 처음이신가요?"
+            android:textColor="@color/black"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="135dp"
+            tools:layout_editor_absoluteY="637dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
