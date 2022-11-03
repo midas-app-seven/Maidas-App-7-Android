@@ -2,6 +2,8 @@ package com.junsu.maidasapp7.user.fragment.user
 
 import android.os.Bundle
 import android.view.View
+import android.view.animation.Animation
+import android.view.animation.AnimationUtils
 import androidx.lifecycle.ViewModelProvider
 import com.junsu.maidasapp7.R
 import com.junsu.maidasapp7.base.BaseFragment
@@ -10,6 +12,7 @@ import com.junsu.maidasapp7.databinding.FragmentUserStampBinding
 class UserStampFragment : BaseFragment<FragmentUserStampBinding>(
     R.layout.fragment_user_stamp
 ) {
+
 
     var isWorking = false
 
@@ -49,6 +52,13 @@ class UserStampFragment : BaseFragment<FragmentUserStampBinding>(
     }
 
     private fun changeUserWorkState() {
+
+        val fadeInAnimation: Animation =
+            AnimationUtils.loadAnimation(requireActivity(), R.anim.anim_fade_in)
+
+        val fadeOutAnimation: Animation =
+            AnimationUtils.loadAnimation(requireActivity(), R.anim.anim_fade_out)
+
         with(binding) {
             if (isWorking) {
                 buttonWorkState.apply {
@@ -58,9 +68,11 @@ class UserStampFragment : BaseFragment<FragmentUserStampBinding>(
                     text = DO_WAITING
 
                 }
-                tvUserStampWorkState.text = /*TODO*/ WORKING
+                tvUserStampWorkStateWorking.startAnimation(fadeInAnimation)
+                tvUserStampWorkStateWaiting.startAnimation(fadeOutAnimation)
                 /* TODO* */
                 isWorking = false
+
 
                 run {
                     radioBtn1.isEnabled = false
@@ -75,7 +87,8 @@ class UserStampFragment : BaseFragment<FragmentUserStampBinding>(
                     text = DO_WORKING
 
                 }
-                tvUserStampWorkState.text = /*TODO*/ WAITING
+                tvUserStampWorkStateWorking.startAnimation(fadeOutAnimation)
+                tvUserStampWorkStateWaiting.startAnimation(fadeInAnimation)
 
                 isWorking = true
 
@@ -88,3 +101,4 @@ class UserStampFragment : BaseFragment<FragmentUserStampBinding>(
         }
     }
 }
+

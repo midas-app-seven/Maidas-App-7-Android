@@ -7,9 +7,20 @@ import retrofit2.http.POST
 
 interface UserStampAPI {
 
+    @POST("TODO")
+    suspend fun getUserWorkState(@Body userStampGetWorkStateRequest: UserStampGetWorkStateRequest): Response<UserStampGetWorkStateResponse>
+
     @POST(" TODO")
     suspend fun changeUserWorkState(@Body userStampChangeWorkStateRequest: UserStampChangeWorkStateRequest): Response<UserStampChangeWorkStateResponse>
 }
+
+data class UserStampGetWorkStateRequest(
+    val todo: String,
+)
+
+data class UserStampGetWorkStateResponse(
+    val workState: String,
+)
 
 data class UserStampChangeWorkStateRequest(
     val type: String, //TODO
