@@ -20,5 +20,5 @@ data class UserRegisterRequest(
     val companyCode: String,
 )
 
-val registerAPI: UserRegisterAPI =
+val userRegisterAPI: UserRegisterAPI =
     RetrofitClient.getRetrofitClient()!!.create(UserRegisterAPI::class.java)
