@@ -20,6 +20,7 @@
             app:layout_constraintTop_toBottomOf="@id/tvUserStampWorkState" />
 
         <TextView
+            android:id="@+id/tvUserStampWorkTime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="000분 남았어요"

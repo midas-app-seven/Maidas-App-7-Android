@@ -24,3 +24,12 @@ class UserStampFragmentViewModel(private val repository: UserStampRepository) : 
         }
     }
 }
+
+var startTime: Int? = null
+
+const val WAITING = "대기"
+const val DO_WORKING = "근무하기"
+
+const val WORKING = "근무"
+const val DO_WAITING = "대기하기"
+

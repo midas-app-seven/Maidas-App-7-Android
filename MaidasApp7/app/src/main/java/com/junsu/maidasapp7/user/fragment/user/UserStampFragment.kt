@@ -11,6 +11,8 @@ class UserStampFragment : BaseFragment<FragmentUserStampBinding>(
     R.layout.fragment_user_stamp
 ) {
 
+    var isWorking = false
+
     private val viewModel by lazy {
         ViewModelProvider(
             this,
@@ -32,6 +34,7 @@ class UserStampFragment : BaseFragment<FragmentUserStampBinding>(
                     //TODO
                 )
             )*/
+            changeUserWorkState()
         }
     }
 
@@ -47,7 +50,41 @@ class UserStampFragment : BaseFragment<FragmentUserStampBinding>(
 
     private fun changeUserWorkState() {
         with(binding) {
-            buttonWorkState.setBackgroundDrawable()
+            if (isWorking) {
+                buttonWorkState.apply {
+                    setBackgroundResource(
+                        R.drawable.background_btn_primary_red
+                    )
+                    text = DO_WAITING
+
+                }
+                tvUserStampWorkState.text = /*TODO*/ WORKING
+                /* TODO* */
+                isWorking = false
+
+                run {
+                    radioBtn1.isEnabled = false
+                    radioBtn2.isEnabled = false
+                    radioBtn3.isEnabled = false
+                }
+            } else {
+                buttonWorkState.apply {
+                    setBackgroundResource(
+                        R.drawable.background_btn_primary
+                    )
+                    text = DO_WORKING
+
+                }
+                tvUserStampWorkState.text = /*TODO*/ WAITING
+
+                isWorking = true
+
+                run {
+                    radioBtn1.isEnabled = true
+                    radioBtn2.isEnabled = true
+                    radioBtn3.isEnabled = true
+                }
+            }
         }
     }
 }
