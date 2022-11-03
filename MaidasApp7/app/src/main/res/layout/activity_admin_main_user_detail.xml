@@ -7,186 +7,191 @@
     android:background="@color/base"
     tools:context=".admin.AdminMainUserDetailActivity">
 
-    <!-- TODO AppBar로 변경 -->
-    <LinearLayout
-        android:id="@+id/topLinear"
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="57dp"
         android:background="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent" >
+
         <TextView
+            android:id="@+id/userName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_marginStart="18dp"
-            android:text="사원명"
+            android:text="닉네임"
             android:textColor="@color/black"
             android:textSize="18sp" />
-    </LinearLayout>
-    <ImageView
-        android:id="@+id/commuteColor"
-        android:layout_width="60dp"
-        android:layout_height="30dp"
-        android:layout_marginEnd="14dp"
-        android:background="@drawable/background_btn"
-        android:backgroundTint="@color/highlight_primary"
-        app:layout_constraintBottom_toBottomOf="@id/topLinear"
-        app:layout_constraintEnd_toEndOf="@id/topLinear"
-        app:layout_constraintTop_toTopOf="@id/topLinear" />
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="퇴근"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="@id/commuteColor"
-        app:layout_constraintEnd_toEndOf="@id/commuteColor"
-        app:layout_constraintStart_toStartOf="@id/commuteColor"
-        app:layout_constraintTop_toTopOf="@id/commuteColor" />
 
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
 
-
-
-
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/userInfo"
-        android:layout_width="match_parent"
-        android:layout_height="270dp"
-        android:layout_marginHorizontal="10dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/background_btn"
-        android:backgroundTint="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/topLinear">
-
-        <TextView
-            android:id="@+id/textUserName"
+        <FrameLayout
+            android:layout_gravity="right"
+            android:layout_marginEnd="15dp"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:text="사원 [부서]"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:layout_height="wrap_content" >
 
-        <ImageView
-            android:id="@+id/workSystem"
-            android:layout_width="100dp"
-            android:layout_height="30dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="6dp"
-            android:background="@drawable/background_btn"
-            android:backgroundTint="@color/over_8_hour"
-            app:layout_constraintEnd_toStartOf="@id/btnEditWorkSystem"
-            app:layout_constraintTop_toTopOf="parent" />
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="30dp"
+                android:background="@drawable/background_btn"
+                android:backgroundTint="@color/highlight_primary"
+                app:layout_constraintBottom_toBottomOf="parent" />
 
-        <TextView
-            android:id="@+id/textWorkSystem"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="탄력근무제"
-            android:textColor="@color/white"
-            android:textSize="12sp"
-            app:layout_constraintBottom_toBottomOf="@id/workSystem"
-            app:layout_constraintEnd_toEndOf="@id/workSystem"
-            app:layout_constraintStart_toStartOf="@id/workSystem"
-            app:layout_constraintTop_toTopOf="@id/workSystem" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="퇴근"
+                android:layout_gravity="center"
+                android:textColor="@color/white" />
 
-        <ImageButton
-            android:id="@+id/btnEditWorkSystem"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            android:layout_marginEnd="16dp"
-            android:background="@android:color/transparent"
-            android:src="@drawable/ic_edit_work_system"
-            app:layout_constraintBottom_toBottomOf="@id/workSystem"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/workSystem" />
+        </FrameLayout>
 
-        <TextView
-            android:id="@+id/textPhone"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="18dp"
-            android:text="전화번호: 010-1111-1111"
-            android:textColor="@color/black"
-            app:layout_constraintStart_toStartOf="@id/textUserName"
-            app:layout_constraintTop_toBottomOf="@+id/textUserName" />
+    </androidx.appcompat.widget.Toolbar>
 
-        <TextView
-            android:id="@+id/textMail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:text="메일: asd@gmail.com"
-            android:textColor="@color/black"
-            app:layout_constraintStart_toStartOf="@id/textPhone"
-            app:layout_constraintTop_toBottomOf="@+id/textPhone" />
-
-        <TextView
-            android:id="@+id/textLastWeek"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="42dp"
-            android:text="저번 주 일한 시간\t\t40/40"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@+id/textMail"
-            app:layout_constraintTop_toBottomOf="@+id/textMail" />
-
-        <ImageView
-            android:id="@+id/imgLastWeekWorkOk"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="14dp"
-            android:src="@drawable/ic_lastweek_work_ok"
-            app:layout_constraintBottom_toBottomOf="@+id/textLastWeek"
-            app:layout_constraintStart_toEndOf="@+id/textLastWeek"
-            app:layout_constraintTop_toTopOf="@+id/textLastWeek" />
-
-        <TextView
-            android:id="@+id/textThisWeek"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="18dp"
-            android:text="이번 주 일한 시간\t\t36/40"
-            android:textColor="@color/black"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@+id/textLastWeek"
-            app:layout_constraintTop_toBottomOf="@+id/textLastWeek" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="24dp"
-            android:layout_marginBottom="14dp"
-            android:text="남은 연차: 3일"
-            android:textColor="@color/black"
-            android:textSize="12sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerAnnualRequest"
-        android:layout_width="match_parent"
+    <ScrollView
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginHorizontal="20dp"
-        android:layout_marginVertical="12dp"
-        tools:listitem="@layout/item_annual_request_recycler"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/userInfo" />
+        app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/userInfo"
+                android:layout_width="match_parent"
+                android:layout_height="270dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/background_btn"
+                android:backgroundTint="@color/white"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/textUserName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="20dp"
+                    android:text="닉네임"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <ImageButton
+                    android:id="@+id/btnEditWorkSystem"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@android:color/transparent"
+                    android:src="@drawable/ic_edit_work_system"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textMail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="30dp"
+                    android:text="메일: asd@gmail.com"
+                    android:textColor="@color/black"
+                    app:layout_constraintStart_toStartOf="@id/textUserName"
+                    app:layout_constraintTop_toBottomOf="@+id/textUserName" />
+
+                <TextView
+                    android:id="@+id/textLastWeek"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="48dp"
+                    android:text="저번 주 일한 시간\t\t40/40"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/textMail"
+                    app:layout_constraintTop_toBottomOf="@+id/textMail" />
+
+                <ImageView
+                    android:id="@+id/imgLastWeekWorkOk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:src="@drawable/ic_lastweek_work_ok"
+                    app:layout_constraintBottom_toBottomOf="@+id/textLastWeek"
+                    app:layout_constraintStart_toEndOf="@+id/textLastWeek"
+                    app:layout_constraintTop_toTopOf="@+id/textLastWeek" />
+
+                <TextView
+                    android:id="@+id/textThisWeek"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:text="이번 주 일한 시간\t\t36/40"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/textLastWeek"
+                    app:layout_constraintTop_toBottomOf="@+id/textLastWeek" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="24dp"
+                    android:layout_marginBottom="14dp"
+                    android:text="남은 연차: 3일"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/workCalender"
+                android:layout_width="0dp"
+                android:layout_height="320dp"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/background_btn"
+                android:backgroundTint="@color/white"
+                android:orientation="horizontal"
+                app:layout_constraintBottom_toTopOf="@id/recyclerAnnualRequest"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/userInfo">
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerAnnualRequest"
+                android:layout_width="match_parent"
+                android:layout_height="340dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginVertical="12dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/workCalender"
+                tools:listitem="@layout/item_annual_request_recycler" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
