@@ -5,11 +5,15 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:ignore="MissingConstraints">
 
 
         <!--이메일 입력-->
         <!--비밀번호 입력-->
+
+        <!--로그인하기-->
+
         <ImageView
             android:id="@+id/imgStartLogo"
             android:layout_width="wrap_content"
@@ -18,16 +22,15 @@
             android:src="@drawable/logo_with_text"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="93dp"
+            tools:layout_editor_absoluteY="162dp" />
 
         <EditText
             android:id="@+id/etUserLoginEmail"
             android:layout_width="300dp"
             android:layout_height="48dp"
-            android:layout_marginStart="57dp"
-            android:layout_marginTop="341dp"
-            android:layout_marginEnd="58dp"
-            android:layout_marginBottom="14dp"
+            android:layout_marginTop="100dp"
             android:background="@drawable/background_et"
             android:ems="10"
             android:hint="이메일을 입력하세요"
@@ -35,21 +38,15 @@
             android:padding="12dp"
             android:textColorHint="#000000"
             android:textSize="14sp"
-            app:layout_constraintBottom_toTopOf="@+id/etUserLoginPassword"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0"
-            tools:ignore="MissingConstraints" />
+            app:layout_constraintTop_toBottomOf="@id/imgStartLogo" />
 
         <EditText
             android:id="@+id/etUserLoginPassword"
             android:layout_width="300dp"
             android:layout_height="48dp"
-            android:layout_marginStart="57dp"
-            android:layout_marginEnd="58dp"
-            android:layout_marginBottom="125dp"
+            android:layout_marginTop="12dp"
             android:background="@drawable/background_et"
             android:ems="10"
             android:hint="비밀번호를 입력하세요"
@@ -57,17 +54,18 @@
             android:padding="12dp"
             android:textColorHint="#000000"
             android:textSize="14sp"
-            app:layout_constraintBottom_toTopOf="@+id/btnUserLoginLogin"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            tools:ignore="MissingConstraints" />
-
-        <!--로그인하기-->
+            app:layout_constraintTop_toBottomOf="@id/etUserLoginEmail"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="55dp"
+            tools:layout_editor_absoluteY="377dp" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btnUserLoginLogin"
             android:layout_width="300dp"
             android:layout_height="48dp"
+            android:layout_marginBottom="60dp"
             android:background="@drawable/background_btn_primary"
             android:ems="10"
             android:inputType="textPersonName"
@@ -77,21 +75,24 @@
             android:textColor="@color/white"
             android:textColorHint="#000000"
             android:textSize="14sp"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="55dp"
-            tools:layout_editor_absoluteY="589dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints" />
 
-        <androidx.appcompat.widget.AppCompatButton
+        <TextView
             android:id="@+id/tvUserLoginGoToRegister"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="transparent"
+            android:layout_marginTop="12dp"
             android:stateListAnimator="@null"
             android:text="만들다가 처음이신가요?"
             android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnUserLoginLogin"
             tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="135dp"
-            tools:layout_editor_absoluteY="637dp" />
+            tools:layout_editor_absoluteX="135dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
