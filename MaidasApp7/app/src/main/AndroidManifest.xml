@@ -20,14 +20,14 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".StartActivity"
+            android:name=".presentation.start.view.StartActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".main.view.MainActivity"
+            android:name=".presentation.main.view.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
