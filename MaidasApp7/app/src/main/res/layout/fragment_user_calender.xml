@@ -122,8 +122,9 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/layoutUserCalendarAnnualInformation"
                 android:layout_width="300dp"
-                android:layout_height="48dp"
+                android:layout_height="wrap_content"
                 android:background="@drawable/background_round_white"
+                android:padding="12dp"
                 app:layout_constraintBottom_toTopOf="@id/btnUserCalendarApplyVacation"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -138,8 +139,9 @@
                     android:textColor="@color/black"
                     android:textSize="28sp"
                     android:textStyle="bold"
-                    tools:layout_editor_absoluteX="195dp"
-                    tools:layout_editor_absoluteY="5dp" />
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/textview5"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/textview5"
@@ -148,6 +150,10 @@
                     android:text="개"
                     android:textColor="@color/black"
                     android:textSize="20sp"
+
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
                     tools:layout_editor_absoluteX="245dp"
                     tools:layout_editor_absoluteY="11dp" />
 

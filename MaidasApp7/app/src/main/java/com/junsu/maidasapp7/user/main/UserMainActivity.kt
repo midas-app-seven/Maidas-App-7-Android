@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import com.junsu.maidasapp7.R
 import com.junsu.maidasapp7.base.BaseActivity
 import com.junsu.maidasapp7.databinding.ActivityUserMainBinding
+import com.junsu.maidasapp7.user.fragment.calendar.UserCalendarFragment
 import com.junsu.maidasapp7.user.fragment.user.UserStampFragment
 
 class UserMainActivity : BaseActivity<ActivityUserMainBinding>(
@@ -13,6 +14,10 @@ class UserMainActivity : BaseActivity<ActivityUserMainBinding>(
 
     private val userStampFragment: UserStampFragment by lazy {
         UserStampFragment()
+    }
+
+    private val userCalendarFragment: UserCalendarFragment by lazy {
+        UserCalendarFragment()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -30,7 +35,7 @@ class UserMainActivity : BaseActivity<ActivityUserMainBinding>(
                     true
                 }
                 R.id.bnUserMainCalendar -> {
-                    // TODO
+                    changeFragment(userCalendarFragment)
                     true
                 }
                 R.id.bnUserMainSettings -> {

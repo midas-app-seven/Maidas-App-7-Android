@@ -151,7 +151,6 @@
                 android:background="@drawable/background_round_white"
                 android:orientation="vertical"
                 android:padding="16dp"
-                app:layout_constraintBaseldine_toBottomOf="parent"
                 app:layout_constraintBottom_toTopOf="@id/layoutUserStampStampInformation"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
