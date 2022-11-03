@@ -16,13 +16,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnStartUser"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginTop="150dp"
-        android:backgroundTint="@color/primary"
+        android:background="@drawable/background_btn_primary"
+        android:stateListAnimator="@null"
         android:text="사용자로 시작하기"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/img_logo" />
@@ -32,10 +34,10 @@
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginTop="8dp"
-        android:backgroundTint="#FFFFFF"
+        android:background="@drawable/background_btn_secondary"
         android:text="관리자로 시작하기"
-        android:background="@drawable/button_round"
         android:textColor="@color/primary"
+        android:stateListAnimator="@null"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnStartUser" />
