@@ -1,9 +1,9 @@
-package com.junsu.maidasapp7.presentation
+package com.junsu.maidasapp7.user.main
 
 import android.os.Bundle
 import com.junsu.maidasapp7.R
 import com.junsu.maidasapp7.databinding.ActivityUserMainBinding
-import com.junsu.movie.presentation.base.BaseActivity
+import com.junsu.maidasapp7.base.BaseActivity
 
 class UserMainActivity : BaseActivity<ActivityUserMainBinding>(
     R.layout.activity_user_main

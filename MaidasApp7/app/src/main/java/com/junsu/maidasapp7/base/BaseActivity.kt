@@ -1,4 +1,4 @@
-package com.junsu.movie.presentation.base
+package com.junsu.maidasapp7.base
 
 import android.os.Bundle
 import androidx.annotation.LayoutRes

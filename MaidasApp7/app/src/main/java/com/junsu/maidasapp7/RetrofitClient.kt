@@ -1,4 +1,4 @@
-package com.junsu.maidasapp7.data
+package com.junsu.maidasapp7
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
