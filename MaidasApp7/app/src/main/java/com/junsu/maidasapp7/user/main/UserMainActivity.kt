@@ -18,6 +18,7 @@ class UserMainActivity : BaseActivity<ActivityUserMainBinding>(
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        changeFragment(userStampFragment)
         initWidgets()
     }
 

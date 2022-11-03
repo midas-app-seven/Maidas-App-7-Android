@@ -67,7 +67,10 @@ class UserRegisterActivity : BaseActivity<ActivityUserRegisterBinding>(
             if (it) {
                 with(binding) {
                     etUserRegisterEmail.isEnabled = false
-                    btnUserRegisterVerifyEmail.isEnabled = false
+                    btnUserRegisterVerifyEmail.apply {
+                        isEnabled = false
+                        setBackgroundResource(R.drawable.background_btn_primary_disabled)
+                    }
                 }
             }
         }
