@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:tools="http://schemas.android.com/tools"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -17,8 +17,9 @@
             android:textColor="#545454"
             android:textSize="16sp"
             android:textStyle="bold"
-            tools:layout_editor_absoluteX="262dp"
-            tools:layout_editor_absoluteY="136dp" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -33,97 +34,24 @@
                 android:id="@+id/textView4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
                 android:text="남은 연차"
                 android:textColor="@color/black"
                 android:textSize="16dp"
                 android:textStyle="bold"
-                tools:layout_editor_absoluteX="64dp"
-                tools:layout_editor_absoluteY="143dp" />
+                app:layout_constraintBottom_toTopOf="@id/layoutUserCalendarAnnualInformation"
+                app:layout_constraintStart_toStartOf="@id/layoutUserCalendarAnnualInformation" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="280dp"
-                android:layout_height="48dp"
+                android:id="@+id/layoutUserCalendarStampInformation"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
                 android:background="@drawable/background_round_white"
-                tools:layout_editor_absoluteX="65dp"
-                tools:layout_editor_absoluteY="174dp">
-
-                <TextView
-                    android:id="@+id/te425xtView8"
-                    android:layout_width="50dp"
-                    android:layout_height="wrap_content"
-                    android:gravity="right"
-                    android:text="999"
-                    android:textColor="@color/black"
-                    android:textSize="28dp"
-                    android:textStyle="bold"
-                    tools:layout_editor_absoluteX="195dp"
-                    tools:layout_editor_absoluteY="5dp" />
-
-                <TextView
-                    android:id="@+id/countOfVacation"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="개"
-                    android:textColor="@color/black"
-                    android:textSize="20dp"
-                    tools:layout_editor_absoluteX="245dp"
-                    tools:layout_editor_absoluteY="11dp" />
-
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="일에 일한 시간"
-                android:textColor="@color/black"
-                android:textSize="16dp"
-                android:textStyle="bold"
-                tools:layout_editor_absoluteX="124dp"
-                tools:layout_editor_absoluteY="46dp" />
-
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="11"
-                android:textColor="@color/black"
-                android:textSize="16dp"
-                android:textStyle="bold"
-                android:gravity="right"
-                tools:layout_editor_absoluteX="64dp"
-                tools:layout_editor_absoluteY="46dp" />
-
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="월"
-                android:textColor="@color/black"
-                android:textSize="16dp"
-                android:textStyle="bold"
-                tools:layout_editor_absoluteX="82dp"
-                tools:layout_editor_absoluteY="46dp" />
-
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="20dp"
-                android:layout_height="wrap_content"
-                android:gravity="right"
-                android:text="33"
-                android:textColor="@color/black"
-                android:textSize="16dp"
-                android:textStyle="bold"
-                tools:layout_editor_absoluteX="104dp"
-                tools:layout_editor_absoluteY="46dp" />
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="280dp"
-                android:layout_height="48dp"
-                android:background="@drawable/background_round_white"
-                tools:layout_editor_absoluteX="64dp"
-                tools:layout_editor_absoluteY="79dp">
+                android:padding="16dp"
+                app:layout_constraintBottom_toTopOf="@id/layoutUserCalendarAnnualInformation"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
                 <TextView
                     android:id="@+id/textView1"
@@ -131,42 +59,21 @@
                     android:layout_height="wrap_content"
                     android:text="출근"
                     android:textColor="@color/black"
-                    android:textSize="14dp"
-                    tools:layout_editor_absoluteX="7dp"
-                    tools:layout_editor_absoluteY="5dp" />
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/textView1"
+                    android:id="@+id/tvUserCalendarTotalTime"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="퇴근"
+                    android:text="240/480"
                     android:textColor="@color/black"
-                    android:textSize="14dp"
-                    tools:layout_editor_absoluteX="49dp"
-                    tools:layout_editor_absoluteY="5dp" />
-
-                <TextView
-                    android:id="@+id/textView8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="/480"
-                    android:textColor="@color/black"
-                    android:textSize="28dp"
+                    android:textSize="28sp"
                     android:textStyle="bold"
-                    tools:layout_editor_absoluteX="187dp"
-                    tools:layout_editor_absoluteY="5dp" />
-
-                <TextView
-                    android:id="@+id/textView10"
-                    android:layout_width="71dp"
-                    android:layout_height="38dp"
-                    android:gravity="right"
-                    android:text="240"
-                    android:textColor="@color/black"
-                    android:textSize="28dp"
-                    android:textStyle="bold"
-                    tools:layout_editor_absoluteX="115dp"
-                    tools:layout_editor_absoluteY="5dp" />
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/textView9"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/textView9"
@@ -174,40 +81,105 @@
                     android:layout_height="wrap_content"
                     android:text="분"
                     android:textColor="@color/black"
-                    android:textSize="20dp"
-                    tools:layout_editor_absoluteX="245dp"
-                    tools:layout_editor_absoluteY="11dp" />
+                    android:textSize="20sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/textView"
+                    android:id="@+id/tvUserCalendarStartOfWorkStampTime"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="08:00"
                     android:textColor="@color/black"
-                    android:textSize="14dp"
-                    tools:layout_editor_absoluteX="7dp"
-                    tools:layout_editor_absoluteY="23dp" />
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@id/textView1"
+                    app:layout_constraintTop_toBottomOf="@id/textView1" />
 
                 <TextView
-                    android:id="@+id/textView"
+                    android:id="@+id/textView2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="18:00"
+                    android:text="출근"
                     android:textColor="@color/black"
-                    android:textSize="14dp"
-                    tools:layout_editor_absoluteX="49dp"
-                    tools:layout_editor_absoluteY="23dp" />
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toTopOf="@id/tvUserCalendarEndOfWorkStampTime"
+                    app:layout_constraintStart_toStartOf="@id/tvUserCalendarEndOfWorkStampTime" />
+
+                <TextView
+                    android:id="@+id/tvUserCalendarEndOfWorkStampTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:text="08:00"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@id/tvUserCalendarStartOfWorkStampTime"
+                    app:layout_constraintStart_toEndOf="@id/tvUserCalendarStartOfWorkStampTime"
+                    app:layout_constraintTop_toTopOf="@id/tvUserCalendarStartOfWorkStampTime" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutUserCalendarAnnualInformation"
+                android:layout_width="300dp"
+                android:layout_height="48dp"
+                android:background="@drawable/background_round_white"
+                app:layout_constraintBottom_toTopOf="@id/btnUserCalendarApplyVacation"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layoutUserCalendarStampInformation">
+
+                <TextView
+                    android:id="@+id/tvUserCalendarAnnualLeft"
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="999"
+                    android:textColor="@color/black"
+                    android:textSize="28sp"
+                    android:textStyle="bold"
+                    tools:layout_editor_absoluteX="195dp"
+                    tools:layout_editor_absoluteY="5dp" />
+
+                <TextView
+                    android:id="@+id/textview5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="개"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    tools:layout_editor_absoluteX="245dp"
+                    tools:layout_editor_absoluteY="11dp" />
+
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="11월 3일에 일한 시간"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@id/layoutUserCalendarStampInformation"
+                app:layout_constraintStart_toStartOf="@id/layoutUserCalendarStampInformation"
+                app:layout_constraintTop_toTopOf="parent" />
+
             <androidx.appcompat.widget.AppCompatButton
-                android:layout_width="278dp"
+                android:id="@+id/btnUserCalendarApplyVacation"
+                android:layout_width="300dp"
                 android:layout_height="49dp"
                 android:background="@drawable/background_btn_primary"
                 android:text="쉬는 날 신청"
                 android:textColor="@color/white"
+                app:layout_constraintBottom_toBottomOf="parent"
+
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layoutUserCalendarAnnualInformation"
                 tools:layout_editor_absoluteX="64dp"
-                tools:layout_editor_absoluteY="251dp" />
+                tools:layout_editor_absoluteY="308dp" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>

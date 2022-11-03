@@ -62,7 +62,7 @@
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/layoutUserStampStampInformation"
-                android:layout_width="280dp"
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="60dp"
                 android:background="@drawable/background_round_white"
@@ -109,7 +109,7 @@
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
-                    android:id="@+id/textView"
+                    android:id="@+id/tvUserStampFirstStampTime"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="08:00"
@@ -119,7 +119,6 @@
                     app:layout_constraintTop_toBottomOf="@id/textView1"
                     tools:layout_editor_absoluteX="7dp"
                     tools:layout_editor_absoluteY="23dp" />
-
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TextView
@@ -136,7 +135,7 @@
 
             <RadioGroup
                 android:id="@+id/radioGroupUserStamp"
-                android:layout_width="280dp"
+                android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/background_round_white"
                 android:orientation="vertical"
