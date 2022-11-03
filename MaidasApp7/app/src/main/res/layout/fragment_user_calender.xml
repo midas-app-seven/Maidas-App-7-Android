@@ -8,14 +8,13 @@
         android:layout_height="match_parent"
         tools:ignore="MissingConstraints">
 
-        <FrameLayout
+        <com.prolificinteractive.materialcalendarview.MaterialCalendarView
             android:layout_width="0dp"
             android:layout_height="0dp"
             app:layout_constraintBottom_toTopOf="@id/layoutUserCalendarContainer"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" >
-        </FrameLayout>
+            app:layout_constraintTop_toTopOf="parent" />
 
 
         <androidx.constraintlayout.widget.ConstraintLayout
