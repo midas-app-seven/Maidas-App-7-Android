@@ -1,17 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".user.main.UserMainActivity"/>
+        tools:context=".user.main.UserMainActivity">
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:layout_width="82dp"
-        android:layout_height="48dp"
-        android:text="안녕하세요"
-        android:textSize="14dp"
-        android:textColor="@drawable/background_btn"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

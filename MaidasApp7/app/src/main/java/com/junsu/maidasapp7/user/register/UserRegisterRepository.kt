@@ -7,4 +7,8 @@ class UserRegisterRepository {
     suspend fun register(request: UserRegisterRequest): Response<Void> {
         return userRegisterAPI.register(request)
     }
+
+    suspend fun verifyEmail(request: VerifyEmailRequest): Response<Void> {
+        return userRegisterAPI.verifyEmail(request)
+    }
 }

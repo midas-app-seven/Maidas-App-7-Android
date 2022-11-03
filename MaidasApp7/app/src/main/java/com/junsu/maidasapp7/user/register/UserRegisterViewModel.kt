@@ -9,17 +9,35 @@ import retrofit2.Response
 
 class UserRegisterViewModel(private val repository: UserRegisterRepository) : ViewModel() {
 
-    private var _registerResponse = MutableLiveData<Response<Void>>()
-    val registerResponse: LiveData<Response<Void>> = _registerResponse
+    private var _response = MutableLiveData<Response<Void>>()
+    val response: LiveData<Response<Void>> = _response
+
+    private var _isVerifyEmailSent = MutableLiveData<Boolean>()
+    val isVerifyEmailSent = _isVerifyEmailSent
+
 
     internal fun register(request: UserRegisterRequest) {
         viewModelScope.launch {
             kotlin.runCatching {
                 repository.register(request)
             }.onSuccess {
-                _registerResponse.value = it
+                _response.postValue(it)
             }.onFailure {
-                println("Failure..$it")
+                println("Failure.. $it")
+            }
+        }
+    }
+
+    internal fun verifyEmail(request: VerifyEmailRequest) {
+        viewModelScope.launch {
+            kotlin.runCatching {
+                repository.verifyEmail(request)
+            }.onSuccess {
+                if (it.isSuccessful)
+                    _isVerifyEmailSent.postValue(true)
+            }.onFailure {
+                _isVerifyEmailSent.postValue(false)
+                println("Failure.. $it")
             }
         }
     }

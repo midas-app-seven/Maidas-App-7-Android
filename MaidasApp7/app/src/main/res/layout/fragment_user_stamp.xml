@@ -95,7 +95,7 @@
                     android:textStyle="bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@id/textView9"
-                    app:layout_constraintTop_toTopOf="" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/textView9"
@@ -152,7 +152,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="33dp"
                     android:layout_marginTop="6dp"
-                    android:background="parent"
                     android:text="회사" />
 
                 <RadioButton
@@ -160,7 +159,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="33dp"
                     android:layout_marginTop="5dp"
-                    android:background="parent"
                     android:text="자택/스마트워크센터" />
 
                 <RadioButton
@@ -168,7 +166,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="33dp"
                     android:layout_marginTop="5dp"
-                    android:background="parent"
                     android:text="출장" />
             </RadioGroup>
 
