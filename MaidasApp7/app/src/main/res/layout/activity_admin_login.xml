@@ -27,13 +27,13 @@
             tools:layout_editor_absoluteY="162dp" />
 
         <EditText
-            android:id="@+id/etAdminLoginDepartmentId"
+            android:id="@+id/etAdminLoginEmail"
             android:layout_width="300dp"
             android:layout_height="48dp"
             android:layout_marginTop="100dp"
             android:background="@drawable/background_et"
             android:ems="10"
-            android:hint="부서 아이디를 입력하세요"
+            android:hint="부서 이메일을 입력하세요"
             android:padding="12dp"
             android:textColorHint="#000000"
             android:textSize="14sp"
@@ -55,7 +55,7 @@
             android:textSize="14sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/etAdminLoginDepartmentId"
+            app:layout_constraintTop_toBottomOf="@id/etAdminLoginEmail"
             tools:ignore="MissingConstraints"
             tools:layout_editor_absoluteX="55dp"
             tools:layout_editor_absoluteY="377dp" />

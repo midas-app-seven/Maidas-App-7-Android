@@ -4,37 +4,39 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.junsu.maidasapp7.Token.accessToken
 import kotlinx.coroutines.launch
 import retrofit2.Response
 
 class UserStampFragmentViewModel(private val repository: UserStampRepository) : ViewModel() {
 
-    private var _workState = MutableLiveData<Response<UserStampGetWorkStateResponse>>()
-    val workState: LiveData<Response<UserStampGetWorkStateResponse>> = _workState
+    init {
+        getUserStatus()
+    }
 
-    private var _response = MutableLiveData<Response<UserStampChangeWorkStateResponse>>()
-    val response: LiveData<Response<UserStampChangeWorkStateResponse>> = _response
+    private var _workStatus = MutableLiveData<Response<UserStampUserStatusResponse>>()
+    val workStatus: LiveData<Response<UserStampUserStatusResponse>> = _workStatus
 
-    fun getUserWorkState() {
+    private var _response = MutableLiveData<Response<UserStampStartWorkResponse>>()
+    val response: LiveData<Response<UserStampStartWorkResponse>> = _response
+
+    private fun getUserStatus() {
         viewModelScope.launch {
             kotlin.runCatching {
-                repository.getUserWorkState(
-                    UserStampGetWorkStateRequest(
-                        "TODO"
-                    )
-                )
+                repository.getUserStatus(accessToken!!)
             }.onSuccess {
-                _workState.postValue(it)
+                println("HIHIHIHIHI${it.body()}")
+                _workStatus.postValue(it)
             }.onFailure {
                 println("Failure.. $it")
             }
         }
     }
 
-    fun changeUserWorkState(request: UserStampChangeWorkStateRequest) {
+    internal fun startWork() {
         viewModelScope.launch {
             kotlin.runCatching {
-                repository.changeUserWorkState(request)
+                repository.startWork(accessToken!!)
             }.onSuccess {
                 _response.postValue(it)
             }.onFailure {
@@ -44,11 +46,7 @@ class UserStampFragmentViewModel(private val repository: UserStampRepository) : 
     }
 }
 
-var startTime: Int? = null
-
-const val WAITING = "대기"
 const val DO_WORKING = "근무하기"
 
-const val WORKING = "근무"
 const val DO_WAITING = "대기하기"
 

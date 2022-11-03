@@ -12,44 +12,40 @@
             android:id="@+id/imgStartLogo"
             android:layout_width="135dp"
             android:layout_height="94dp"
+            android:layout_margin="32dp"
             android:src="@drawable/logo_setting"
-            tools:layout_editor_absoluteX="30dp"
-            tools:layout_editor_absoluteY="68dp" />
+            app:layout_constraintBottom_toTopOf="@id/layoutUserSettings"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layoutUserSettings"
             android:layout_width="match_parent"
             android:layout_height="550dp"
             android:background="@color/Gray_back"
-            tools:layout_editor_absoluteX="0dp"
-            tools:layout_editor_absoluteY="182dp">
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
 
             <!--개인정보수정-->
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btnUserChangeInfo"
-                android:layout_width="300dp"
-                android:layout_height="36dp"
-                android:background="@drawable/background_round_white"
-                android:drawableRight="@drawable/logo_black_pointer"
-                android:gravity="left"
-                android:padding="10dp"
-                android:text="개인 정보 수정"
-                android:textColor="#545454"
-                tools:layout_editor_absoluteX="55dp"
-                tools:layout_editor_absoluteY="31dp" />
 
             <!--로그아웃-->
+
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnUserLogout"
                 android:layout_width="300dp"
-                android:layout_height="36dp"
+                android:layout_height="48dp"
+                android:layout_margin="32dp"
                 android:background="@drawable/background_round_white"
-                android:drawableRight="@drawable/logo_highlight_pointer"
-                android:gravity="left"
+                android:drawableEnd="@drawable/logo_highlight_pointer"
+                android:gravity="center_vertical"
                 android:padding="10dp"
                 android:text="로그아웃"
                 android:textColor="@color/highlight_primary"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
                 tools:layout_editor_absoluteX="55dp"
-                tools:layout_editor_absoluteY="79dp" />
+                tools:layout_editor_absoluteY="33dp" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>

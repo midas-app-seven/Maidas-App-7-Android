@@ -10,10 +10,10 @@ interface UserLoginAPI {
 
     @POST("/auth/user/login")
     @Headers("Content-Type: application/json")
-    suspend fun login(@Body loginRequest: LoginRequest): Response<LoginResponse>
+    suspend fun login(@Body userLoginRequest: UserLoginRequest): Response<LoginResponse>
 }
 
-data class LoginRequest(
+data class UserLoginRequest(
     val email: String,
     val password: String,
 )
