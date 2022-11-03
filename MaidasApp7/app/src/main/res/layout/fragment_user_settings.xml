@@ -29,35 +29,23 @@
             <!--개인정보수정-->
 
             <!--로그아웃-->
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btnUserChangeInfo"
-                android:layout_width="300dp"
-                android:layout_height="48dp"
-                android:layout_margin="16dp"
-                android:background="@drawable/background_round_white"
-                android:drawableEnd="@drawable/logo_black_pointer"
-                android:gravity="center_vertical"
-                android:padding="10dp"
-                android:text="개인 정보 수정"
-                android:textColor="#545454"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
 
             <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btnUserLogout"
                 android:layout_width="300dp"
                 android:layout_height="48dp"
-                android:layout_marginTop="12dp"
+                android:layout_margin="32dp"
                 android:background="@drawable/background_round_white"
                 android:drawableEnd="@drawable/logo_highlight_pointer"
                 android:gravity="center_vertical"
                 android:padding="10dp"
                 android:text="로그아웃"
                 android:textColor="@color/highlight_primary"
-                app:layout_constraintEnd_toEndOf="@id/btnUserChangeInfo"
-                app:layout_constraintStart_toStartOf="@id/btnUserChangeInfo"
-                app:layout_constraintTop_toBottomOf="@id/btnUserChangeInfo" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteX="55dp"
+                tools:layout_editor_absoluteY="33dp" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>

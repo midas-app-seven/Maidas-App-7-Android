@@ -18,6 +18,26 @@ class TodayDecorator(context: Context) : DayViewDecorator {
     }
 }
 
+class TomorrowDecorator(context: Context) : DayViewDecorator {
+
+    val drawable = context.getDrawable(R.drawable.background_transparent)!!
+
+    override fun shouldDecorate(day: CalendarDay?): Boolean {
+        return when (day!!.month) {
+            CalendarDay.today().month -> {
+                true
+            }
+            else -> {
+                false
+            }
+        }
+    }
+
+    override fun decorate(view: DayViewFacade?) {
+        view?.setBackgroundDrawable(drawable)
+    }
+}
+
 class AllDecorator(context: Context) : DayViewDecorator {
 
     val drawable = context.getDrawable(R.drawable.background_no_worktime)!!
@@ -28,6 +48,94 @@ class AllDecorator(context: Context) : DayViewDecorator {
 
     override fun decorate(view: DayViewFacade?) {
         view?.setBackgroundDrawable(drawable)
+    }
+}
+
+class RandomDecorator3(context: Context) : DayViewDecorator {
+
+    private val _day = CalendarDay.today().day
+
+    val drawable1 = context.getDrawable(R.drawable.background_below_four_hours)!!
+
+    override fun shouldDecorate(day: CalendarDay?): Boolean {
+        return when {
+            day!!.day % 3 == 0 -> {
+                true
+            }
+            else -> {
+                false
+            }
+        }
+    }
+
+    override fun decorate(view: DayViewFacade?) {
+        view?.setBackgroundDrawable(drawable1)
+    }
+}
+
+class RandomDecorator7(context: Context) : DayViewDecorator {
+
+    private val _day = CalendarDay.today().day
+
+    val drawable2 = context.getDrawable(R.drawable.background_below_four_hours)!!
+
+    override fun shouldDecorate(day: CalendarDay?): Boolean {
+        return when {
+            day!!.day % 7 == 0 || day!!.day % 11 == 0 -> {
+                true
+            }
+            else -> {
+                false
+            }
+        }
+    }
+
+    override fun decorate(view: DayViewFacade?) {
+        view?.setBackgroundDrawable(drawable2)
+    }
+}
+
+class RandomDecorator4(context: Context) : DayViewDecorator {
+
+    private val _day = CalendarDay.today().day
+
+    val drawable3 = context.getDrawable(R.drawable.background_below_eight_hours)!!
+
+    override fun shouldDecorate(day: CalendarDay?): Boolean {
+        return when {
+            day!!.day % 4 == 0 -> {
+                true
+            }
+            else -> {
+                false
+            }
+        }
+    }
+
+    override fun decorate(view: DayViewFacade?) {
+        view?.setBackgroundDrawable(drawable3)
+    }
+}
+
+class RandomDecorator456(context: Context) : DayViewDecorator {
+
+    private val _day = CalendarDay.today().day
+
+    val drawable4 = context.getDrawable(R.drawable.background_over_eight_hours)!!
+
+    override fun shouldDecorate(day: CalendarDay?): Boolean {
+        return when {
+            day!!.day % 4 == 0 || day!!.day % 5 == 0 || day!!.day % 6 == 0 -> {
+                true
+            }
+            else -> {
+                false
+            }
+        }
+    }
+
+    override fun decorate(view: DayViewFacade?) {
+        view?.setBackgroundDrawable(drawable4)
     }
 }
 

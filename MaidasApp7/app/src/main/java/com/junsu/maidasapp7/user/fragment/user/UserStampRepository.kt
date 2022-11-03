@@ -4,11 +4,11 @@ import retrofit2.Response
 
 class UserStampRepository {
 
-    suspend fun getUserWorkState(request: UserStampGetWorkStateRequest): Response<UserStampGetWorkStateResponse> {
-        return userStampAPI.getUserWorkState(request)
+    suspend fun getUserStatus(accessToken: String): Response<UserStampUserStatusResponse> {
+        return userStampAPI.getUserStatus(accessToken)
     }
 
-    suspend fun changeUserWorkState(request: UserStampChangeWorkStateRequest): Response<UserStampChangeWorkStateResponse> {
-        return userStampAPI.changeUserWorkState(request)
+    suspend fun startWork(accessToken: String): Response<UserStampStartWorkResponse> {
+        return userStampAPI.startWork(accessToken)
     }
 }

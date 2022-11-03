@@ -2,32 +2,30 @@ package com.junsu.maidasapp7.user.fragment.user
 
 import com.junsu.maidasapp7.RetrofitClient
 import retrofit2.Response
-import retrofit2.http.Body
+import retrofit2.http.GET
+import retrofit2.http.Header
+import retrofit2.http.Headers
 import retrofit2.http.POST
 
 interface UserStampAPI {
 
-    @POST("TODO")
-    suspend fun getUserWorkState(@Body userStampGetWorkStateRequest: UserStampGetWorkStateRequest): Response<UserStampGetWorkStateResponse>
+    @GET("/user/")
+    @Headers("Content-Type: application/json")
+    suspend fun getUserStatus(@Header("Authorization") accessToken: String): Response<UserStampUserStatusResponse>
 
-    @POST(" TODO")
-    suspend fun changeUserWorkState(@Body userStampChangeWorkStateRequest: UserStampChangeWorkStateRequest): Response<UserStampChangeWorkStateResponse>
+    @POST("/work")
+    suspend fun startWork(@Header("Authorization") accessToken: String): Response<UserStampStartWorkResponse>
 }
 
-data class UserStampGetWorkStateRequest(
-    val todo: String,
+data class UserStampUserStatusResponse(
+    val work_status: String,
+    val work_date: String,
+    val place: String,
+    val time: String,
 )
 
-data class UserStampGetWorkStateResponse(
-    val workState: String,
-)
-
-data class UserStampChangeWorkStateRequest(
-    val type: String, //TODO
-)
-
-data class UserStampChangeWorkStateResponse(
-    val type: String, //TODO
+data class UserStampStartWorkResponse(
+    val workStatus: String,
 )
 
 val userStampAPI: UserStampAPI =
