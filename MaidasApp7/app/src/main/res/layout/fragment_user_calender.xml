@@ -9,13 +9,14 @@
         tools:ignore="MissingConstraints">
 
         <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+            android:id="@+id/calendarUserCalendar"
             android:layout_width="0dp"
             android:layout_height="0dp"
             app:layout_constraintBottom_toTopOf="@id/layoutUserCalendarContainer"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
+            app:layout_constraintTop_toTopOf="parent"
+            app:mcv_selectionColor="@color/highlight_secondary" />
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/layoutUserCalendarContainer"
