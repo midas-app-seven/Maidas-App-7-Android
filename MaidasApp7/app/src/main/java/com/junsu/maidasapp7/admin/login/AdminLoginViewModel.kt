@@ -1,4 +1,4 @@
-package com.junsu.maidasapp7.user.login
+package com.junsu.maidasapp7.admin.login
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -8,15 +8,16 @@ import com.junsu.maidasapp7.Token
 import kotlinx.coroutines.launch
 import retrofit2.Response
 
-class UserLoginViewModel(private val repository: UserLoginRepository) : ViewModel() {
+class AdminLoginViewModel(private val repository: AdminLoginRepository) : ViewModel() {
 
-    private var _response = MutableLiveData<Response<LoginResponse>>()
-    val response: LiveData<Response<LoginResponse>> = _response
 
-    internal fun login(userLoginRequest: UserLoginRequest) {
+    private var _response = MutableLiveData<Response<AdminLoginResponse>>()
+    val response: LiveData<Response<AdminLoginResponse>> = _response
+
+    fun login(request: AdminLoginRequest) {
         viewModelScope.launch {
             kotlin.runCatching {
-                repository.login(userLoginRequest)
+                repository.login(request)
             }.onSuccess {
                 _response.postValue(it)
                 if (it.isSuccessful) {

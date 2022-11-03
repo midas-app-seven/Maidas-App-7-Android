@@ -4,7 +4,7 @@ import retrofit2.Response
 
 class UserLoginRepository {
 
-    suspend fun login(loginRequest: LoginRequest): Response<LoginResponse> {
-        return userLoginAPI.login(loginRequest)
+    suspend fun login(userLoginRequest: UserLoginRequest): Response<LoginResponse> {
+        return userLoginAPI.login(userLoginRequest)
     }
 }

@@ -16,14 +16,14 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="31">
         <activity
-            android:name=".AdminMainUserDetailActivity"
+            android:name=".admin.userdetail.AdminMainUserDetailActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
         <activity
-            android:name=".AdminMainActivity"
+            android:name=".admin.main.AdminMainActivity"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -39,11 +39,13 @@
         <activity
             android:name=".user.main.UserMainActivity"
             android:exported="true"
-            android:screenOrientation="portrait" >
+            android:screenOrientation="portrait">
 
 
-
-
+        </activity>
+        <activity
+            android:name=".StartActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -51,21 +53,11 @@
             </intent-filter>
 
 
-
-
-
-
-        </activity>
-        <activity
-            android:name=".StartActivity"
-            android:exported="true">
-
-
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-        <activity android:name=".admin.AdminLoginActivity" />
+        <activity android:name=".admin.login.AdminLoginActivity" />
         <activity android:name=".user.register.UserRegisterActivity" />
     </application>
 

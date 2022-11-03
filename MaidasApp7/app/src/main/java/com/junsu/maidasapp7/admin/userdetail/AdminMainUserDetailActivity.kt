@@ -1,4 +1,4 @@
-package com.junsu.maidasapp7.admin
+package com.junsu.maidasapp7.admin.userdetail
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
