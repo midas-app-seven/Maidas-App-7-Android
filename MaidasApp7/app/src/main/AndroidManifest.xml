@@ -24,10 +24,16 @@
         </activity>
         <activity
             android:name=".admin.main.AdminMainActivity"
-            android:exported="false">
+            android:exported="true">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".user.login.UserLoginActivity"
@@ -41,17 +47,10 @@
             android:exported="true"
             android:screenOrientation="portrait">
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-
         </activity>
         <activity
             android:name=".StartActivity"
             android:exported="true">
-
 
 
             <meta-data

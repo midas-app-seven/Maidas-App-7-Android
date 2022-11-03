@@ -1,197 +1,285 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/base"
-    tools:context=".admin.userdetail.AdminMainUserDetailActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="57dp"
-        android:background="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" >
+        android:layout_height="match_parent"
+        android:background="@color/base"
+        tools:context=".admin.userdetail.AdminMainUserDetailActivity">
 
-        <TextView
-            android:id="@+id/userName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical"
-            android:layout_marginStart="18dp"
-            android:text="닉네임"
-            android:textColor="@color/black"
-            android:textSize="18sp" />
-
-        <View
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_weight="1" />
-
-        <FrameLayout
-            android:layout_gravity="right"
-            android:layout_marginEnd="15dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" >
-
-            <ImageView
-                android:layout_width="60dp"
-                android:layout_height="30dp"
-                android:background="@drawable/background_btn_primary"
-                android:backgroundTint="@color/highlight_primary"
-                app:layout_constraintBottom_toBottomOf="parent" />
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="57dp"
+            android:background="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <TextView
+                android:id="@+id/userName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="퇴근"
-                android:layout_gravity="center"
-                android:textColor="@color/white" />
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="18dp"
+                android:text="김이름"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
 
-        </FrameLayout>
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
 
-    </androidx.appcompat.widget.Toolbar>
-
-    <ScrollView
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolbar">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/userInfo"
-                android:layout_width="match_parent"
-                android:layout_height="270dp"
-                android:layout_marginHorizontal="10dp"
-                android:layout_marginTop="8dp"
-                android:background="@drawable/background_btn_primary"
-                android:backgroundTint="@color/white"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <TextView
-                    android:id="@+id/textUserName"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:layout_marginTop="20dp"
-                    android:text="닉네임"
-                    android:textColor="@color/black"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-
-                <ImageButton
-                    android:id="@+id/btnEditWorkSystem"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_marginTop="25dp"
-                    android:layout_marginEnd="20dp"
-                    android:background="@android:color/transparent"
-                    android:src="@drawable/ic_edit_work_system"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/textMail"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="30dp"
-                    android:text="메일: asd@gmail.com"
-                    android:textColor="@color/black"
-                    app:layout_constraintStart_toStartOf="@id/textUserName"
-                    app:layout_constraintTop_toBottomOf="@+id/textUserName" />
-
-                <TextView
-                    android:id="@+id/textLastWeek"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="48dp"
-                    android:text="저번 주 일한 시간\t\t40/40"
-                    android:textColor="@color/black"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="@+id/textMail"
-                    app:layout_constraintTop_toBottomOf="@+id/textMail" />
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginEnd="15dp">
 
                 <ImageView
-                    android:id="@+id/imgLastWeekWorkOk"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="14dp"
-                    android:src="@drawable/ic_lastweek_work_ok"
-                    app:layout_constraintBottom_toBottomOf="@+id/textLastWeek"
-                    app:layout_constraintStart_toEndOf="@+id/textLastWeek"
-                    app:layout_constraintTop_toTopOf="@+id/textLastWeek" />
-
-                <TextView
-                    android:id="@+id/textThisWeek"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="18dp"
-                    android:text="이번 주 일한 시간\t\t36/40"
-                    android:textColor="@color/black"
-                    android:textSize="16sp"
-                    android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="@+id/textLastWeek"
-                    app:layout_constraintTop_toBottomOf="@+id/textLastWeek" />
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/background_btn_primary"
+                    android:backgroundTint="@color/highlight_primary"
+                    app:layout_constraintBottom_toBottomOf="parent" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="24dp"
-                    android:layout_marginBottom="14dp"
-                    android:text="남은 연차: 3일"
-                    android:textColor="@color/black"
-                    android:textSize="12sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent" />
+                    android:layout_gravity="center"
+                    android:text="퇴근"
+                    android:textColor="@color/white" />
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
+            </FrameLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar">
 
             <androidx.constraintlayout.widget.ConstraintLayout
-                android:id="@+id/workCalender"
-                android:layout_width="0dp"
-                android:layout_height="320dp"
-                android:layout_marginHorizontal="10dp"
-                android:layout_marginTop="12dp"
-                android:background="@drawable/background_btn_primary"
-                android:backgroundTint="@color/white"
-                android:orientation="horizontal"
-                app:layout_constraintBottom_toTopOf="@id/recyclerAnnualRequest"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/userInfo">
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/userInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="270dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/background_btn_primary"
+                    android:backgroundTint="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <TextView
+                        android:id="@+id/textUserName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="20dp"
+                        android:text="김이름"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <ImageButton
+                        android:id="@+id/btnEditWorkSystem"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginTop="25dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="@android:color/transparent"
+                        android:src="@drawable/ic_edit_work_system"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textMail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="30dp"
+                        android:text="메일: abcd@gmail.com"
+                        android:textColor="@color/black"
+                        app:layout_constraintStart_toStartOf="@id/textUserName"
+                        app:layout_constraintTop_toBottomOf="@+id/textUserName" />
+
+                    <TextView
+                        android:id="@+id/textLastWeek"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="48dp"
+                        android:text="저번 주 일한 시간 2475/2400"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@+id/textMail"
+                        app:layout_constraintTop_toBottomOf="@+id/textMail" />
+
+                    <ImageView
+                        android:id="@+id/imgLastWeekWorkOk"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:src="@drawable/ic_lastweek_work_ok"
+                        app:layout_constraintBottom_toBottomOf="@+id/textLastWeek"
+                        app:layout_constraintStart_toEndOf="@+id/textLastWeek"
+                        app:layout_constraintTop_toTopOf="@+id/textLastWeek" />
+
+                    <TextView
+                        android:id="@+id/textThisWeek"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:text="이번 주 일한 시간 1327/2400"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@+id/textLastWeek"
+                        app:layout_constraintTop_toBottomOf="@+id/textLastWeek" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="24dp"
+                        android:layout_marginBottom="14dp"
+                        android:text="남은 연차: 5.5일"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/workCalender"
+                    android:layout_width="0dp"
+                    android:layout_height="320dp"
+                    android:layout_marginHorizontal="10dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/background_btn_primary"
+                    android:backgroundTint="@color/white"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/userInfo">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/start_logo"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:layout_margin="8dp"
+                    android:background="@drawable/background_admin_main_recycler_item"
+                    app:layout_constraintTop_toBottomOf="@id/workCalender">
+
+                    <ImageView
+                        android:id="@+id/annualRequest"
+                        android:layout_width="100dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="18dp"
+                        android:layout_marginTop="12dp"
+                        android:background="@drawable/background_btn_primary"
+                        android:backgroundTint="@color/below_8_hour"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/textAnnualRequest"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="연차 승인 요청"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        app:layout_constraintBottom_toBottomOf="@id/annualRequest"
+                        app:layout_constraintEnd_toEndOf="@id/annualRequest"
+                        app:layout_constraintStart_toStartOf="@id/annualRequest"
+                        app:layout_constraintTop_toTopOf="@id/annualRequest" />
+
+                    <TextView
+                        android:id="@+id/AnnualDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:layout_marginTop="12dp"
+                        android:text="2022/11/05"
+                        android:textColor="@color/black"
+                        android:textSize="12sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@id/annualRequest"
+                        app:layout_constraintTop_toBottomOf="@id/annualRequest" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnAnnulRequestOk"
+                        android:layout_width="100dp"
+                        android:layout_height="35dp"
+                        android:layout_marginTop="18dp"
+                        android:background="@drawable/background_btn_primary_blue"
+                        android:backgroundTint="@color/highlight_secondary"
+                        android:text="승인"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toTopOf="@id/btnAnnulRequestCancel"
+                        app:layout_constraintEnd_toEndOf="@id/btnAnnulRequestCancel"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/btnAnnulRequestCancel"
+                        android:layout_width="100dp"
+                        android:layout_height="35dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginBottom="18dp"
+                        android:background="@drawable/background_btn_primary_red"
+                        android:backgroundTint="@color/highlight_primary"
+                        android:text="취소"
+                        android:textColor="@color/white"
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/btnAnnulRequestOk" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+                <!--<androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerAnnualRequest"
+                    android:layout_width="match_parent"
+                    android:layout_height="340dp"
+                    android:layout_marginHorizontal="20dp"
+                    android:layout_marginVertical="12dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/workCalender"
+                    tools:listitem="@layout/item_annual_request_recycler" />-->
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recyclerAnnualRequest"
-                android:layout_width="match_parent"
-                android:layout_height="340dp"
-                android:layout_marginHorizontal="20dp"
-                android:layout_marginVertical="12dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/workCalender"
-                tools:listitem="@layout/item_annual_request_recycler" />
+        </ScrollView>
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
-
-    </ScrollView>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
