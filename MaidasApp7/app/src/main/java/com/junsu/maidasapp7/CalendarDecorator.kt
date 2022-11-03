@@ -23,7 +23,7 @@ class AllDecorator(context: Context) : DayViewDecorator {
     val drawable = context.getDrawable(R.drawable.background_no_worktime)!!
 
     override fun shouldDecorate(day: CalendarDay?): Boolean {
-        return true
+        return day?.isBefore(CalendarDay.today()) == true
     }
 
     override fun decorate(view: DayViewFacade?) {
