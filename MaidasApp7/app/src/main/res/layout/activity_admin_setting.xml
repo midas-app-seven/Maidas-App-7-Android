@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/imgStartLogo"
+            android:layout_width="135dp"
+            android:layout_height="94dp"
+            android:src="@drawable/logo_setting"
+            tools:layout_editor_absoluteX="30dp"
+            tools:layout_editor_absoluteY="68dp" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="550dp"
+            android:background="@color/Gray_back"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="182dp">
+
+            <!--출장 / 외근 코드 발급하기-->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnAdminWorkCode"
+                android:layout_width="300dp"
+                android:layout_height="36dp"
+                android:background="@drawable/background_round_white"
+                android:drawableRight="@drawable/logo_black_pointer"
+                android:gravity="left"
+                android:padding="10dp"
+                android:text="출장 / 외근 코드 발급하기"
+                android:textColor="#545454"
+                tools:layout_editor_absoluteX="55dp"
+                tools:layout_editor_absoluteY="31dp" />
+
+            <!--회사 근로제도 변경하기-->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnAdminChangeSystem"
+                android:layout_width="300dp"
+                android:layout_height="36dp"
+                android:background="@drawable/background_round_white"
+                android:drawableRight="@drawable/logo_black_pointer"
+                android:gravity="left"
+                android:padding="10dp"
+                android:text="회사 근로제도 변경하기"
+                android:textColor="#545454"
+                tools:layout_editor_absoluteX="55dp"
+                tools:layout_editor_absoluteY="80dp" />
+
+            <!--로그아웃-->
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnAdminLogout"
+                android:layout_width="300dp"
+                android:layout_height="36dp"
+                android:background="@drawable/background_round_white"
+                android:drawableRight="@drawable/logo_highlight_pointer"
+                android:gravity="left"
+                android:padding="10dp"
+                android:text="로그아웃"
+                android:textColor="@color/highlight_primary"
+                tools:layout_editor_absoluteX="55dp"
+                tools:layout_editor_absoluteY="129dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
