@@ -12,6 +12,10 @@ class UserRegisterViewModel(private val repository: UserRegisterRepository) : Vi
     private var _response = MutableLiveData<Response<Void>>()
     val response: LiveData<Response<Void>> = _response
 
+    private var _isVerifyEmailSent = MutableLiveData<Boolean>()
+    val isVerifyEmailSent = _isVerifyEmailSent
+
+
     internal fun register(request: UserRegisterRequest) {
         viewModelScope.launch {
             kotlin.runCatching {
@@ -19,6 +23,20 @@ class UserRegisterViewModel(private val repository: UserRegisterRepository) : Vi
             }.onSuccess {
                 _response.postValue(it)
             }.onFailure {
+                println("Failure.. $it")
+            }
+        }
+    }
+
+    internal fun verifyEmail(request: VerifyEmailRequest) {
+        viewModelScope.launch {
+            kotlin.runCatching {
+                repository.verifyEmail(request)
+            }.onSuccess {
+                if (it.isSuccessful)
+                    _isVerifyEmailSent.postValue(true)
+            }.onFailure {
+                _isVerifyEmailSent.postValue(false)
                 println("Failure.. $it")
             }
         }

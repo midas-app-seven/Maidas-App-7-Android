@@ -25,7 +25,11 @@ class UserRegisterActivity : BaseActivity<ActivityUserRegisterBinding>(
 
     private fun initWidgets() {
         binding.btnUserRegisterVerifyEmail.setOnClickListener {
-            // TODO 인증 요청
+            viewModel.verifyEmail(
+                VerifyEmailRequest(
+                    binding.etUserRegisterEmail.text.toString(),
+                )
+            )
         }
 
         binding.btnUserRegisterRegister.setOnClickListener {
@@ -54,6 +58,17 @@ class UserRegisterActivity : BaseActivity<ActivityUserRegisterBinding>(
                 finish()
             } else {
                 Toast.makeText(this, "회원가입 실패.. ${it.code()}", Toast.LENGTH_SHORT).show()
+            }
+        }
+
+        viewModel.isVerifyEmailSent.observe(
+            this
+        ) {
+            if (it) {
+                with(binding) {
+                    etUserRegisterEmail.isEnabled = false
+                    btnUserRegisterVerifyEmail.isEnabled = false
+                }
             }
         }
     }
