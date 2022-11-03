@@ -40,7 +40,7 @@
             <ImageView
                 android:layout_width="60dp"
                 android:layout_height="30dp"
-                android:background="@drawable/background_btn"
+                android:background="@drawable/background_btn_primary"
                 android:backgroundTint="@color/highlight_primary"
                 app:layout_constraintBottom_toBottomOf="parent" />
 
@@ -73,7 +73,7 @@
                 android:layout_height="270dp"
                 android:layout_marginHorizontal="10dp"
                 android:layout_marginTop="8dp"
-                android:background="@drawable/background_btn"
+                android:background="@drawable/background_btn_primary"
                 android:backgroundTint="@color/white"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -168,7 +168,7 @@
                 android:layout_height="320dp"
                 android:layout_marginHorizontal="10dp"
                 android:layout_marginTop="12dp"
-                android:background="@drawable/background_btn"
+                android:background="@drawable/background_btn_primary"
                 android:backgroundTint="@color/white"
                 android:orientation="horizontal"
                 app:layout_constraintBottom_toTopOf="@id/recyclerAnnualRequest"

@@ -39,7 +39,7 @@
             <ImageView
                 android:layout_width="100dp"
                 android:layout_height="30dp"
-                android:background="@drawable/background_btn"
+                android:background="@drawable/background_btn_primary"
                 android:backgroundTint="@color/below_8_hour" />
 
             <TextView

@@ -20,6 +20,7 @@
             app:layout_constraintTop_toBottomOf="@id/tvUserStampWorkState" />
 
         <TextView
+            android:id="@+id/tvUserStampWorkTime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="000분 남았어요"
@@ -52,7 +53,7 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button123"
+            android:id="@+id/buttonWorkState"
             android:layout_width="82dp"
             android:layout_height="48dp"
             android:layout_margin="32dp"
