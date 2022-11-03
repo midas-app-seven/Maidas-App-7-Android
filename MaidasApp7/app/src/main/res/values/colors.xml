@@ -13,6 +13,14 @@
     <color name="colorPrimary">#25C38A</color>
     <color name="colorSecondary">#A8F8DB</color>
 
+    <color name="base">#F3F3F3</color>
+
     <color name="primary">#25C38A</color>
+    <color name="highlight_primary">#FF6A6A</color>
+    <color name="highlight_secondary">#558FFF</color>
+
+    <color name="below_4_hour">#96DAC1</color>
+    <color name="below_8_hour">#25C38A</color>
+    <color name="over_8_hour">#0A9563</color>
 
 </resources>

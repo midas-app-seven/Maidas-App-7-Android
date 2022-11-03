@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:layout_marginTop="7dp"
+    android:background="@drawable/background_admin_main_recycler_item">
+
+    <ImageView
+        android:id="@+id/annualRequest"
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/background_btn"
+        android:backgroundTint="@color/below_8_hour"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textAnnualRequest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="연차 승인 요청"
+        android:textColor="@color/white"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@id/annualRequest"
+        app:layout_constraintEnd_toEndOf="@id/annualRequest"
+        app:layout_constraintStart_toStartOf="@id/annualRequest"
+        app:layout_constraintTop_toTopOf="@id/annualRequest" />
+
+    <TextView
+        android:id="@+id/AnnualDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="12dp"
+        android:text="2022/11/01"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/annualRequest"
+        app:layout_constraintTop_toBottomOf="@id/annualRequest" />
+
+    <TextView
+        android:id="@+id/AnnualReason"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="사유: 개인사정"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@id/AnnualDate"
+        app:layout_constraintTop_toBottomOf="@id/AnnualDate" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnAnnulRequestOk"
+        android:layout_width="100dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/background_btn"
+        android:backgroundTint="@color/highlight_secondary"
+        android:text="승인"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@id/btnAnnulRequestCancel"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="18dp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnAnnulRequestCancel"
+        android:layout_width="100dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="15dp"
+        android:background="@drawable/background_btn"
+        android:backgroundTint="@color/highlight_primary"
+        android:text="취소"
+        android:textColor="@color/white"
+        android:layout_marginBottom="18dp"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnAnnulRequestOk" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
